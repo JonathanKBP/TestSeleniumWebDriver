@@ -21,7 +21,9 @@ public class InformacoesUsuarioPageObjectsTest {
 		
 		@Before
 		public void setUp() {
-			navegador = Web.createChrome();
+			//navegador = Web.createChrome(); //Executar quando o teste for local
+			navegador = Web.createBrowserStack(); //Executar quando o teste for na nuvem
+			
 		}
 		
 		@Test
