@@ -24,6 +24,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import suporte.Generator;
 import suporte.Screenshot;
+import suporte.Web;
 
 @RunWith(DataDrivenTestRunner.class)
 @DataLoader(filePaths = "InformacoesUsuarioTestData.csv")
@@ -35,18 +36,8 @@ public class InformacoesUsuariosTest {
 
 	@Before
 	public void setUp() {
-		// Abrindo navegador
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Jonathan\\drivers\\chromedriver.exe");
-
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--start-maximized");
-		navegador = new ChromeDriver(options);
-		navegador.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-
-		// Navegando para a pagina taskit
-		navegador.get("http://www.juliodelima.com.br/taskit");
+		navegador = Web.createChrome();
 		
-
 		// Clicar no link que possui o texto "Sign in"
 		navegador.findElement(By.linkText("Sign in")).click();
 
