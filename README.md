@@ -28,5 +28,5 @@ Foram abordados vários assuntos, como @before e @after, gerar evidências com s
 
 ```
 <p align="center">
-Desenvolvido por 💻  Jonathan Kevin
+Desenvolvido por 💻 Jonathan Kevin
 </p>
